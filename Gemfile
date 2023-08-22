@@ -82,3 +82,9 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+gem 'minitest-reporters', '~> 1.1', '>= 1.1.11'
+
+
+
+
