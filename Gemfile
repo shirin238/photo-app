@@ -9,15 +9,6 @@ gem "rails", "~> 7.0.7"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-gem "bootstrap"
-
-gem "sassc-rails"
-
-gem 'jquery-rails'
-
-# Use jquery-ui for pretty UI
-gem 'jquery-ui-rails'
-
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
@@ -53,8 +44,18 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem 'jquery-rails'
+
+# Use jquery-ui for pretty UI
+gem 'jquery-ui-rails'
+
+
+gem "bootstrap"
+
+
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
+
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -88,3 +89,5 @@ gem 'minitest-reporters', '~> 1.1', '>= 1.1.11'
 
 
 
+
+gem "hotwire-rails", "~> 0.1.3"

@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to users_path
+      flash[:success] = "Welcome to the Sample App"
+      redirect_to @user
     else
       render "new", status: :unprocessable_entity
     end
@@ -30,6 +31,7 @@ class UsersController < ApplicationController
   def delete
     @user = User.find(params[:id])
     if @user.destroy
+      flash[:success] = "User deleted"
       redirect_to users_path
     else
       render "show", status: :unprocessable_entity
