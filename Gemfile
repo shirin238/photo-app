@@ -86,8 +86,7 @@ end
 
 gem 'minitest-reporters', '~> 1.1', '>= 1.1.11'
 
-
-
+gem 'rails-controller-testing'
 
 
 gem "hotwire-rails", "~> 0.1.3"

@@ -28,14 +28,12 @@ class UsersController < ApplicationController
   end
 
 
-  def delete
-    @user = User.find(params[:id])
-    if @user.destroy
-      flash[:success] = "User deleted"
-      redirect_to users_path
-    else
-      render "show", status: :unprocessable_entity
-    end
+  
+
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url, status: :see_other
   end
 
     
