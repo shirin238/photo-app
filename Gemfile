@@ -29,8 +29,8 @@ gem "jbuilder"
 
 
 
-# Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+# added per video on how to fix dropdowns 
+  gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -53,8 +53,8 @@ gem 'jquery-ui-rails'
 gem "bootstrap"
 
 
-# Use Sass to process CSS
-gem "sassc-rails"
+# # removed it  per video on how to fix dropdowns 
+#gem "sassc-rails"
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -90,3 +90,6 @@ gem 'rails-controller-testing'
 
 
 gem "hotwire-rails", "~> 0.1.3"
+
+# added per video on how to fix dropdowns 
+#gem 'cssbundling-rails'

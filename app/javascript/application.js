@@ -6,3 +6,4 @@ import "jquery"
 import "jquery_ujs"
 import "./jquery_ui"
 
+import * as bootstrap from "bootstrap"

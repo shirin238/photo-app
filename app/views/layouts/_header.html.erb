@@ -20,15 +20,19 @@
                 <li class="nav-item"><%= link_to "Profile", current_user, class: "dropdown-item"%></li>  
                 <li class="nav-item"><%= link_to "Settings", "#", class: "dropdown-item"%></li>
                 <li class="nav-item"><hr class="dropdown-divider"></li>
-                <li class="nav-item"><%= link_to "Logout", logout_path, 
-                                                      data: { method: :delete}, class: "dropdown-item"%></li>
+                <li class="nav-item"><%= link_to "Log out", logout_path, 
+                                                      data: { "turbo-method": :delete}, class: "dropdown-item"%></li>
+
+                
+
+
                 <!-- <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li> -->
               </ul>
             </li>
-            <li class="nav-item"><%= link_to "Logout", logout_path, data: { method: :delete}, class: "nav-link"%></li>
+            <li class="nav-item"><%= link_to "Logout", logout_path, data: { "turbo-method": :delete}, class: "nav-link"%></li>
             <li class="nav-item"><%= link_to "Profile", current_user, class: "nav-link"%></li>  
             <li class="nav-item"><%= link_to "Settings", "#", class: "nav-link"%></li>
           <% else %>

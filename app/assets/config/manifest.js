@@ -7,3 +7,6 @@
 //= link jquery.min.js
 //= link jquery_ujs.js
 
+//= link_tree ../builds
+
+
