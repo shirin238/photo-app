@@ -10,28 +10,26 @@ class SessionsController < ApplicationController
     
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      redirect_to user_path(user[:id])
+      reset_session
+      log_in(user)
+      redirect_to user
     else
-      flash[:danger] = "Wrong email or password"
+      flash.now[:danger] = "Wrong email or password"
       render "new", status: :unprocessable_entity
     end
 
   end
 
+  
+
 
   def destroy
-    Session.find(params[:id]).destroy
+    log_out if logged_in?
     redirect_to login_path
   end
 
 
 
-
-# private
-
-#   def session_params
-#     params.require(:session).permit(:email, :password)
-#   end
 
 
 

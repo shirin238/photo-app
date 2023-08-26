@@ -3,22 +3,44 @@
 
   <nav class="navbar navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
     
-    <div class="container-fluid"> 
-      
+    <div class="container-fluid">      
       <%= link_to "Sample App", "#", class: "navbar-brand" %> 
       <div>
         <ul class= "nav justify-content-end">
           <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link"%></li>
+          <li class="nav-item"><%= link_to "Help", help_path, class: "nav-link"%></li>
+
+          <% if logged_in? %>
+            <li class="nav-item"><%= link_to "Users", users_path, class: "nav-link"%></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>  
+              <ul class="dropdown-menu">
+                <li class="nav-item"><%= link_to "Profile", current_user, class: "dropdown-item"%></li>  
+                <li class="nav-item"><%= link_to "Settings", "#", class: "dropdown-item"%></li>
+                <li class="nav-item"><hr class="dropdown-divider"></li>
+                <li class="nav-item"><%= link_to "Logout", logout_path, 
+                                                      data: { method: :delete}, class: "dropdown-item"%></li>
+                <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              </ul>
+            </li>
+            <li class="nav-item"><%= link_to "Logout", logout_path, data: { method: :delete}, class: "nav-link"%></li>
+            <li class="nav-item"><%= link_to "Profile", current_user, class: "nav-link"%></li>  
+            <li class="nav-item"><%= link_to "Settings", "#", class: "nav-link"%></li>
+          <% else %>
+            <li class="nav-item"><%= link_to "Login", login_path, class: "nav-link"%></li>
+          <% end %>
           <li class="nav-item"><%= link_to "About", about_path, class: "nav-link"%></li>
           <li class="nav-item"><%= link_to "Contact", contact_path, class: "nav-link"%></li>
-          <li class="nav-item"><%= link_to "Help", help_path, class: "nav-link"%></li>
-          <li class="nav-item"><%= link_to "Login", login_path, class: "nav-link"%></li>
-          <li class="nav-item"><%= link_to "Users", users_path, class: "nav-link"%></li>
         </ul>
       </div>
-
     </div>
 
   </nav>
 
 
+        

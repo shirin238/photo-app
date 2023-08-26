@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
-	#before_action :authenticate_user!
+	include SessionsHelper
 
-	def hello
-    	render html: "hello, world!"
-  	end
+	
 end
